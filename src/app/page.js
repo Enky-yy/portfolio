@@ -19,9 +19,9 @@ export default function Home() {
     },
 
     {
-      title: "AI Image Classification API",
+      title: "A Multipurpose Discord Bot",
       description:
-        "Image classification backend using TensorFlow with REST API deployment.",
+        "A Github-Flows integrated Multipurpose Discord bot.",
       repo_name: "github_api_discord_app",
       stack: ["TensorFlow", "FastAPI", "Python"],
       image: "/Discord-github.png",
