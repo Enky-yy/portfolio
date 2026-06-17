@@ -15,27 +15,39 @@ export default function Home() {
         "A Flask-powered file sharing platform with QR transfer, OCR-based search, and secure uploads.",
       repo_name: "QR-based-File-sharing-App",
       stack: ["Flask", "SQLite", "OCR", "Python"],
+      highlights: [
+        "QR Device Pairing",
+        "OCR File Search",
+        "Multi-file Upload",
+        "Session Authentication",
+      ],
       image: "/qr-code.png",
     },
 
     {
       title: "A Multipurpose Discord Bot",
-      description:
-        "A Github-Flows integrated Multipurpose Discord bot.",
+      description: "A Github-Flows integrated Multipurpose Discord bot.",
       repo_name: "github_api_discord_app",
-      stack: ["TensorFlow", "FastAPI", "Python"],
+      stack: ["Github", "FastAPI", "Python"],
+      highlights: [
+        "GitHub Integration",
+        "Automated Workflows",
+        "Custom Commands",
+        "Multipurposed",
+      ],
+
       image: "/Discord-github.png",
     },
 
-    {
-      title: "BlahBlah",
-      description: "Blah Blah Blah ....",
-      stack: ["OpenCV", "OCR", "Python"],
-    },
+    // {
+    //   title: "BlahBlah",
+    //   description: "Blah Blah Blah ....",
+    //   stack: ["OpenCV", "OCR", "Python"],
+    // },
   ];
 
   const skills = {
-    "AI / ML": [ "Python","TensorFlow", "OpenCV", "Scikit-learn"],
+    "AI / ML": ["Python", "TensorFlow", "OpenCV", "Scikit-learn"],
 
     Backend: ["FastAPI", "Flask", "SQLAlchemy", "MongoDB"],
 
@@ -51,7 +63,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1800);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -96,6 +108,9 @@ export default function Home() {
             <a href="#skills" className="hover:text-white transition ">
               Skills
             </a>
+            <a href="#building" className="hover:text-white transition">
+              Building
+            </a>
             <a href="#contact" className="hover:text-white transition  ">
               Contact
             </a>
@@ -135,9 +150,13 @@ export default function Home() {
                 <a href="#projects">View Projects</a>
               </button>
 
-              <button className="border border-white/20 hover:border-white/40 transition px-7 py-4 rounded-2xl">
+              <a
+                href="/resume.pdf"
+                download
+                className="border border-white/20 hover:border-white/40 transition px-7 py-4 rounded-2xl"
+              >
                 Download Resume
-              </button>
+              </a>
             </div>
             <div className="flex flex-wrap gap-3 mt-10">
               {["FastAPI", "TensorFlow", "OpenCV", "Linux"].map((item) => (
@@ -237,7 +256,7 @@ export default function Home() {
         </div>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 flex">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -264,7 +283,7 @@ export default function Home() {
               </p>
 
               {/* Stack */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
@@ -275,12 +294,25 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Highlights Metrics
+              <div className="grid grid-cols-2 gap-2 mb-6 mt-auto">
+                {project.highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="text-sm text-gray-300 flex items-center gap-2"
+                  >
+                    <span className="text-green-400">•</span>
+                    {item}
+                  </div>
+                ))}
+              </div> */}
+
               {/* buttons */}
-              <div className="flex gap-5 text-sm">
-                <button className="text-blue-400 hover:text-blue-300 transition">
+              <div className="flex gap-5 text-sm mb-auto">
+                <button className="text-blue-400 hover:text-blue-300 transition visited:text-blue-400">
                   <a
                     href={`https://github.com/${GitHub_Username}/${project.repo_name}`}
-                    target="_blank"
+                    target="_blank" 
                   >
                     GitHub →
                   </a>
@@ -342,6 +374,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </div>
+
+      <section className="py-28 px-6" id="building">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <p className="text-blue-400 uppercase tracking-[0.3em] mb-4 text-sm">
+              Currently Building
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-bold">
+              What I'm Working On
+            </h2>
+          </div>
+
+          <div className="rounded-3xl border border-blue-500/20 bg-blue-500/5 p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm">
+                In Progress
+              </span>
+            </div>
+
+            <h3 className="text-3xl font-bold mb-4">CodeCompass</h3>
+
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              An AI-powered platform that helps developers understand unfamiliar
+              GitHub repositories in minutes. The goal is to generate repository
+              overviews, architecture insights, contribution guides, and
+              onboarding roadmaps for new contributors.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Repository Summarization",
+                "Contribution Guide Generation",
+                "Architecture Mapping",
+                "Codebase Understanding",
+                "AI-Powered Insights",
+                "Developer Onboarding",
+              ].map((feature) => (
+                <div
+                  key={feature}
+                  className="rounded-xl bg-white/5 border border-white/10 px-4 py-3"
+                >
+                  ✓ {feature}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </div>
+
       <section className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
@@ -355,10 +446,18 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 overflow-x-auto">
-            <GitHubCalendar username={`${GitHub_Username}`} colorScheme="dark" />
+            <GitHubCalendar
+              username={`${GitHub_Username}`}
+              colorScheme="dark"
+            />
           </div>
         </div>
       </section>
+
+      {/* Section Divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </div>
 
       {/* Experience */}
       <section id="experience" className="py-28 px-6">
@@ -404,7 +503,8 @@ export default function Home() {
               </span>
 
               <p className="text-gray-400 leading-relaxed">
-                Worked as Coverage Head for Day 1 of Technex 2026 and successfully documented whole event across platforms.
+                Worked as Coverage Head for Day 1 of Technex 2026 and
+                successfully documented whole event across platforms.
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/5 p-8 hover:bg-white/9">
@@ -417,7 +517,8 @@ export default function Home() {
               </span>
 
               <p className="text-gray-400 leading-relaxed">
-                Worked on managing key events and coordination to ensure smooth execution and participants experience
+                Worked on managing key events and coordination to ensure smooth
+                execution and participants experience
               </p>
             </div>
           </div>
