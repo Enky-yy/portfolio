@@ -140,7 +140,7 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
-              I build AI-powered backend systems, computer vision applications,
+              I build AI-powered systems, applications,
               and scalable web solutions using FastAPI, TensorFlow, OpenCV, and
               modern web technologies.
             </p>
@@ -206,7 +206,7 @@ export default function Home() {
                       sequence={[
                         "Building AI-powered backend systems.",
                         2000,
-                        "Creating computer vision applications.",
+                        "Creating wonderful applications.",
                         2000,
                         "Developing scalable FastAPI solutions.",
                         2000,
