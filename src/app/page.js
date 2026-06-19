@@ -140,8 +140,8 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
-              I build AI-powered systems, applications,
-              and scalable web solutions using FastAPI, TensorFlow, OpenCV, and
+              I build AI-powered softwares, applications,
+              and scalable web solutions using FastAPI, TensorFlow, and
               modern web technologies.
             </p>
 
