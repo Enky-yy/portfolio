@@ -161,7 +161,7 @@ export default function Home() {
               </a>
             </div>
             <div className="flex flex-wrap gap-3 mt-10">
-              {["FastAPI", "TensorFlow", "OpenCV", "Linux"].map((item) => (
+              {["FastAPI", "TensorFlow", 'Python', "Linux"].map((item) => (
                 <div
                   key={item}
                   className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 backdrop-blur-xl"
@@ -197,7 +197,7 @@ export default function Home() {
                 <div>
                   <p className="text-green-400">$ stack</p>
                   <p className="text-white mt-1">
-                    Python • FastAPI • TensorFlow • OpenCV • Linux
+                    Python • FastAPI • TensorFlow • Linux
                   </p>
                 </div>
 
