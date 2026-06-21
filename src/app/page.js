@@ -39,11 +39,14 @@ export default function Home() {
       image: "/Discord-github.png",
     },
 
-    // {
-    //   title: "BlahBlah",
-    //   description: "Blah Blah Blah ....",
-    //   stack: ["OpenCV", "OCR", "Python"],
-    // },
+    {
+      title: "URL Shortner",
+      description:
+        "FastAPI based URL Shortner with Base62 encoding, redis caching and Click analytics ",
+      repo_name: "URL-Shortner",
+      stack: ["FastAPI", "JavaScript",'SQLite', "Python"],
+      image: "/link.png",
+    },
   ];
 
   const skills = {
@@ -140,9 +143,8 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
-              I build AI-powered softwares, applications,
-              and scalable web solutions using FastAPI, TensorFlow, and
-              modern web technologies.
+              I build AI-powered softwares, applications, and scalable web
+              solutions using FastAPI, TensorFlow, and modern web technologies.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -312,7 +314,7 @@ export default function Home() {
                 <button className="text-blue-400 hover:text-blue-300 transition visited:text-blue-400">
                   <a
                     href={`https://github.com/${GitHub_Username}/${project.repo_name}`}
-                    target="_blank" 
+                    target="_blank"
                   >
                     GitHub →
                   </a>
