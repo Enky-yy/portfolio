@@ -29,3 +29,13 @@ h5,
 h6 {
   font-family: var(--font-space);
 }
+
+.markdown-body ul {
+  list-style: disc !important;
+  margin-left: 1.5rem;
+}
+
+.markdown-body ol {
+  list-style: decimal !important;
+  margin-left: 1.5rem;
+}

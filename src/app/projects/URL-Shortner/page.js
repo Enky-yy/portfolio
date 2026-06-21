@@ -11,7 +11,7 @@ export default function QRSharePage() {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/Enky-yy/github_api_discord_app/main/README.md",
+      "https://raw.githubusercontent.com/Enky-yy/URL-Shortner/main/README.md"
     )
       .then((res) => res.text())
       .then((data) => setReadme(data));
@@ -27,7 +27,6 @@ export default function QRSharePage() {
         }}
       >
 
-        
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
         >

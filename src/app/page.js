@@ -22,6 +22,7 @@ export default function Home() {
         "Session Authentication",
       ],
       image: "/qr-code.png",
+      live_demo :'',
     },
 
     {
@@ -37,6 +38,7 @@ export default function Home() {
       ],
 
       image: "/Discord-github.png",
+      live_demo :'',
     },
 
     {
@@ -46,6 +48,7 @@ export default function Home() {
       repo_name: "URL-Shortner",
       stack: ["FastAPI", "JavaScript",'SQLite', "Python"],
       image: "/link.png",
+      live_demo :"https://short.harsh-shah.me",
     },
   ];
 
@@ -320,9 +323,13 @@ export default function Home() {
                   </a>
                 </button>
 
-                <button className="text-purple-400 hover:text-purple-300 transition">
-                  Live Demo →
-                </button>
+                <Link href={`${project.live_demo}`} target="_blank">
+                  <button className="text-purple-400 hover:text-purple-300 transition">
+                    Live Demo →
+                  </button>
+                </Link>
+
+        
                 <Link href={`/projects/${project.repo_name}`} target="_blank">
                   <button className="text-purple-400 hover:text-purple-300 transition">
                     Full Description →

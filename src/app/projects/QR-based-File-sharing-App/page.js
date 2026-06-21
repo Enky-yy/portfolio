@@ -1,22 +1,41 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+import "github-markdown-css/github-markdown-dark.css";
+
 export default function QRSharePage() {
   const [readme, setReadme] = useState("");
+
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/Enky-yy/QR-based-File-sharing-App/main/README.md",
+      "https://raw.githubusercontent.com/Enky-yy/QR-based-File-sharing-App/main/README.md"
     )
       .then((res) => res.text())
       .then((data) => setReadme(data));
   }, []);
+
   return (
-    <main className="min-h-screen bg-[#0B0F19] text-white px-6 py-28">
-      
-      <div className="max-w-5xl mx-auto prose prose-invert max-w-none">
+    <main className="min-h-screen bg-[#0B0F19] px-6 py-4">
+
+      <div
+        className="markdown-body max-w-5xl mx-auto p-8 rounded-xl"
+        style={{
+          backgroundColor: "#0d1117",
+        }}
+      >
+
         
-        <ReactMarkdown>{readme}</ReactMarkdown>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+        >
+          {readme}
+        </ReactMarkdown>
+
       </div>
+
     </main>
   );
 }
